@@ -90,6 +90,7 @@ var upperCasedCharacters = [
 
 // Function to prompt user for password options
 function getPasswordOptions() {
+  // object to hold user password criteria
   var passwordOptions = {
     passwordLength: 0,
     passwordCharacters: []
@@ -134,6 +135,7 @@ function getPasswordOptions() {
     }
 
   } else {
+    // if user input worng display alert message
     alert("Please enter a number between 10 and 64")
   }
 }
@@ -146,8 +148,10 @@ function getRandom(arr) {
 
 // Function to generate password with user input
 function generatePassword() {
+
   var selectedPasswordOptions = getPasswordOptions();
   
+  // generate password based on user criteria
   if(selectedPasswordOptions) {  
     var userPassword = "";
     for(var i = 0; i < selectedPasswordOptions.passwordLength; i++) {
